@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial</title>
+  <!-- Incluindo Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="botão.css"/>
+  
+  <style>
+    /* Estilos CSS para a barra de navegação */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .navbar {
+        background-color: #81d3ba;
+        overflow: hidden;
+    }
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: #085a42;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    .navbar a:hover {
+        background-color: #81d3ba;
+        color: #085a42;
+    }
+
+    .nav-link {
+        color: #085a42;
+    }
+
+    /* Estilos CSS para o formulário de contato */
+    .container {
+        padding: 20px;
+    }
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    label, input, textarea {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .footer {
+        background-color: #085a42;
+        color: #81d3ba;
+        text-align: center;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Estilos CSS para o conteúdo */
+    .content {
+        padding: 20px;
+    }
+
+    /* Estilos CSS para a janela flutuante */
+    .popup {
+        position: fixed;
+        top: 0;
+        right: -400px; /* Inicialmente, a janela está fora da tela */
+        width: 300px;
+        height: 100%;
+        background-color: #81d3ba;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    .popup.open {
+        right: 0; /* Quando aberta, a janela fica visível */
+    }
+
+    .popup-header {
+        background-color: #085a42;
+        color: #81d3ba;
+        padding: 10px;
+    }
+
+    .popup-content {
+        padding: 20px;
+    }
+
+    /* Estilos CSS para os campos de texto na janela flutuante */
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+.button-56 {
+  align-items: center;
+  background-color: #81d3ba;
+  border: 2px solid #085a42;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #085a42;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-56:after {
+  background-color: #085a42;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #81d3ba;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg ">
+  
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><b>Estilos Musicais</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Inicio.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Historia.html">História</a>
+              </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Contato.html">Contato</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Login.html">Login</a>
+              </li>
+              </ul>
+            
+            
+            <form class="d-flex" role="Pesquisar">
+              <input class="form-control me-2" type="Pesquisar" placeholder="Pesquisar" aria-label="Pesquisar">
+              <button class="btn" type="submit">Pesquisar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+          <!-- Janela flutuante -->
+    <div class="popup" id="myPopup">
+        <div class="popup-header">
+            <h2>Curiosidades</h2>
+            <button class="button-56" role="button" onclick="closePopup()">Fechar</button>
+        </div>
+        <div class="popup-content">
+          
+            <a class="nav-link active" aria-current="page" href="Historia.html"><b>História</b></a>
+            <a class="nav-link active" aria-current="page" href="Curiosidades.html"><b>Curiosidades</b></a>
+
+        </div>
+    </div>
+
+    <!-- Botão para abrir a janela flutuante -->
+    <button class="button-56" role="button" onclick="openPopup()">Abrir Janela</button>
+
+    <!-- JavaScript para abrir e fechar a janela flutuante -->
+    <script>
+        function openPopup() {
+            document.getElementById("myPopup").classList.add("open");
+        }
+
+        function closePopup() {
+            document.getElementById("myPopup").classList.remove("open");
+        }
+    </script>
+    
+    <div class="content">
+        <h1>História da música eletrônica</h1>
+        <p>
+            A música eletrônica, nos moldes que conhecemos hoje, começou a ser desenvolvida em 1948, quando o músico francês, Pierre Schaeffer passou a unir instrumentos diferentes e gravações de toca-discos em uma única música, fazendo surgir posteriormente as mixagens sonoras.   
+        </p>
+        <p>
+            Schaeffer fazia ainda o que os DJs de hoje utilizam como recurso, que é modificar os sons através da manipulação da velocidade ou alternância no sentido da gravação original.
+        </p>
+        <p>
+            Em 1951, a música eletrônica passou a emergir na Alemanha e ali foi criado o primeiro estúdio totalmente dedicado a esse tipo de som. Os alemães Werner Meyer-Eppler, Robert Beyer e Herbert Eimer foram os responsáveis por esse projeto, mas diferente dos franceses que usavam objetos sonoros e instrumentos tradicionais para criarem os sons, eles desenvolviam suas técnicas através de osciladores elétricos.
+        </p>
+        <p>
+            A popularização da música eletrônica no mundo se deu com o surgimento dos sintetizadores digitais, mas foi a partir do uso de softwares e computadores pessoais que o ritmo virou febre. Graças a esses equipamentos, passou a ser possível utilizar recursos de áudio e emular funcionalidades próprias de instrumentos musicais ou de sintetizadores.
+        </p>
+
+
+        <h1>A relação dos jovens com a música eletrônica</h1>
+        <p>
+            A característica dançante da música eletrônica ganhou ramificações em estilos como trance, house, techno, harcore, break, drum and bass e muito mais. Com o surgimento das raves, a música eletrônica dançante se desenvolveu de uma forma excepcional.
+        </p>
+        <p>
+            Não é que anteriormente à cultura dessas festas a música eletrônica não havia conquistado o gosto dos jovens, mas o fato é que foi a partir daí que esse grupo de pessoas passou a ter uma identificação ainda maior com o estilo que tinha como um dos seus objetivos a interação entre pessoas, assim como a elevação da consciência. Tratava-se e ainda se trata de uma fuga da realidade através da arte e do movimento do corpo.
+        </p>
+        <P>
+            Nos dias de hoje, a música eletrônica é um dos grandes trunfos da indústria fonográfica e os diversos festivais musicais espalhados pelo mundo têm um importante papel na economia mundial.
+        </P>
+        <p>
+            Enquanto que as raves eram classificadas pela mídia como ponto de encontro dos jovens interessados somente em sexo e drogas, os festivais são grandiosos eventos respeitados em todo o mundo e é ali que muitos jovens se reúnem para experimentarem a liberdade sonora e corporal que esse estilo musical tem o poder de oferecer.
+        </p>
+
+
+        </div>
+
+<footer style="background-color: #81d3ba; color: #085a42; text-align: center; padding: 10px; position: fixed; bottom: 0; width: 100%;">
+    © 2023 Estilos Musicais
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">    
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous">   
+</script>
+
+  <!-- Incluindo jQuery e Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
